@@ -4,44 +4,38 @@
 #FFE5DB
 #57BABA
  */
-
 button.changecolor {
+  position: absolute;
   border: none;
   outline: none;
   padding: 15px;
   cursor: pointer;
-  z-index: 7;
-  position: relative;
 }
 svg#loading-svg {
   width: 150px;
   height: 150px;
   overflow: visible;
-  /* margin: auto; */
+  margin: auto;
   display: block;
-  position: relative;
-}
-svg#loading-svg {
   filter: drop-shadow(1px 1px 1px black);
 }
-.heart-rate {
-  width: 150px;
-  height: 73px;
-  position: relative;
-  margin: 0 5%;
-}
-.heart-rate svg polyline {
-  stroke: #000;
+#myProgress {
+  width: 100%;
+  background-color: grey;
 }
 
+#myBar {
+  width: 1%;
+  height: 30px;
+  background-color: green;
+}
 .loading-wrapper {
   position: fixed;
   left: 0;
   top: 0;
   width: 100%;
-  align-items: center;
-  place-content: center;
+  z-index: 999;
   display: flex;
   height: 100%;
-  background-color:#B5F2F1
+  background-color: #b5f2f1;
 }
