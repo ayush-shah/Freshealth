@@ -23,6 +23,6 @@ function changeStrokeColor() {
     strokecolor[strokeCounter];
   strokeCounter++;
 }
-setTimeout(() => {
+window.addEventListener("load",()=>{
   document.getElementsByClassName("disappear")[0].style.display = "none";
-}, 3000);
+})
