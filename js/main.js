@@ -1,5 +1,13 @@
-let color = ["#B5F2F1","#57BABA", "#E19B8E", "#FFE5DB","#fff"];
-let strokecolor = ["#B5F2F1","#57BABA", "#E19B8E", "#FFE5DB", "#f25a5f", "#000", "#fff"];
+let color = ["#c7fefe", "#57BABA", "#E19B8E", "#FFE5DB", "#fff"];
+let strokecolor = [
+  "#c7fefe",
+  "#57BABA",
+  "#E19B8E",
+  "#FFE5DB",
+  "#f25a5f",
+  "#000",
+  "#fff",
+];
 let counter = 0;
 let strokeCounter = 0;
 function changeBackgroundColor() {
@@ -15,3 +23,6 @@ function changeStrokeColor() {
     strokecolor[strokeCounter];
   strokeCounter++;
 }
+setTimeout(() => {
+  document.getElementsByClassName("disappear")[0].style.display = "none";
+}, 3000);

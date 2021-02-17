@@ -1,0 +1,138 @@
+/* 
+#c7fefe
+#f25a5f
+#E19B8E
+#FFE5DB
+#57BABA
+ */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.logo {
+  display: flex;
+  margin-left: 10%;
+  justify-content: flex-start;
+  height: 100%;
+  align-items: center;
+}
+button.changecolor {
+  position: absolute;
+  border: none;
+  outline: none;
+  padding: 15px;
+  cursor: pointer;
+}
+svg#loading-svg {
+  width: 150px;
+  height: 150px;
+  overflow: visible;
+  margin: auto;
+  display: block;
+}
+
+path#heart {
+  animation: heartbeat 2.5s infinite both ease-in-out;
+}
+
+@keyframes heartbeat {
+  50% {
+    fill: #f25a5f;
+    transform: scale(1.05);
+  }
+}
+svg#loading-svg {
+  filter: drop-shadow(1px 1px 1px black);
+}
+.loading-wrapper {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  display: flex;
+  height: 100%;
+  background-color: #c7fefe;
+}
+nav {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  box-shadow: 0px 1px 10px #00000025;
+}
+ul {
+  display: flex;
+  list-style: none;
+  flex: 1 0;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 10%;
+}
+
+li {
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0 25px;
+}
+
+.borderLeftRight {
+  display: inline-block;
+  position: relative;
+  color: hsl(222, 25%, 14%);
+  cursor: pointer;
+}
+
+.borderLeftRight::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: hsl(243, 80%, 62%);
+  transform-origin: bottom right;
+  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.borderLeftRight:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.textTransformX {
+  cursor: pointer;
+  color: hsl(222, 25%, 14%);
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.textTransformX:hover {
+  transform: translateX(4px);
+  color: hsl(243, 80%, 62%);
+}
+
+@media screen and (max-width: 786px) {
+  header {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  .logo {
+    display: none;
+  }
+  ul {
+    margin-right: 0;
+    justify-content: space-around;
+    text-align: center;
+    flex: 1 0 100%;
+  }
+  nav {
+    height: 50px;
+  }
+  li {
+    margin: 0;
+  }
+}
